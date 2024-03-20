@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Map Game</title>
+  </head>
+  <body>
+    <div class="left-side-div">
+      <h1>Potato Map</h1>
+      <div class="mapMain">
+        <div class="grid">
+          <!-- Div elements for the grid -->
+        </div>
+      </div>
+    </div>
+
+    <div class="instructions">
+      <div class="seasons">
+        <div class="spring-season">
+          <p class="sprint-text">Spring:</p>
+          <p><span id="spring-point">0</span> points</p>
+        </div>
+        <div class="summer-season">
+          <p class="summer-text">Summer:</p>
+          <p><span id="summer-point">0</span> points</p>
+        </div>
+        <div class="autumn-season">
+          <p class="autumn-text">Autumn:</p>
+          <p><span id="autumn-point">0</span> points</p>
+        </div>
+        <div class="winter-season">
+          <p class="winter-text">Winter:</p>
+          <p><span id="winter-point">0</span> points</p>
+        </div>
+      </div>
+      <h2>Total: <span id="total-points">0</span> Points</h2>
+      <div class="current-h3">
+        <h3>Current season: <span id="current-season">Spring</span> (BC)</h3>
+      </div>
+      <div class="missions" id="missionContainer">
+        <div class="mission-A">
+          <p><span id="points-A">0</span> points</p>
+          <span id="active"></span>
+          <span id="mission-name-A">A</span>
+        </div>
+        <div class="mission-B">
+          <p><span id="points-B">0</span> points</p>
+          <span id="active"></span>
+          <span id="mission-name-B">B</span>
+        </div>
+        <div class="mission-C">
+          <p><span id="points-C">0</span> points</p>
+          <span id="active"></span>
+          <span id="mission-name-C">C</span>
+        </div>
+        <div class="mission-D">
+          <p><span id="points-D">0</span> points</p>
+          <span id="active"></span>
+          <span id="mission-name-D">D</span>
+        </div>
+      </div>
+      <div class="current-h3">
+        <h3>
+          Elapsed time in current season: <span id="elapsed-time">0</span>/7
+        </h3>
+      </div>
+      <div class="new-game">
+        <h4>Game Finished !</h4>
+        <button type="button" id="new-game-button" onclick="startNewGame()">
+          New Game
+        </button>
+      </div>
+      <div class="bottom-box">
+        <div class="element-h3">
+          <h3>Current Element:</h3>
+        </div>
+        <div class="current-element">
+          <div class="rotate-button">
+            <button id="rotateButton" type="button">Rotate</button>
+          </div>
+          <div class="flip-button">
+            <button id="flipButton" type="button">Flip</button>
+          </div>
+        </div>
+        <div class="element-box">
+          <div class="time-element">
+            <span id="time-value">0</span>
+            <img class="time-logo" src="assets/time_icon.png" alt="" />
+          </div>
+          <div class="grid-element"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="config.js"></script>
+  <script src="script.js"></script>
+</html>

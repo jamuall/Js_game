@@ -1,0 +1,317 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  /* background-image: url(assets/backroundMain.png); */
+  background-image: url(assets/ai.png);
+  background-color: rgba(255, 255, 255, 0.45);
+  background-blend-mode: overlay;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+  margin-left: 30px;
+}
+
+.mapMain {
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+@media screen and (min-width: 1000px) and (max-width: 1150px) {
+  .mapMain {
+    margin-left: 160px;
+  }
+
+  h1 {
+    margin-left: 150px;
+  }
+}
+
+.map-square {
+  background-image: url("assets/base_tile.png");
+  background-size: cover;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(11, 45px); /* 11 columns */
+  grid-template-rows: repeat(11, 45px); /* 11 rows */
+  gap: 4px; /* Gap between grid squares */
+}
+
+.mountain {
+  background-image: url("assets/mountain_tile.png");
+  background-size: cover;
+}
+
+.instructions {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.seasons,
+.missions,
+.current-element {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.seasons .spring-season,
+.seasons .summer-season,
+.seasons .autumn-season,
+.seasons .winter-season {
+  /* CSS styles for children of .seasons class */
+  width: 100px;
+  height: 80px;
+  margin: 5px;
+  padding-bottom: 15px;
+  border-radius: 15px;
+  text-align: center;
+  color: white;
+  font-size: 17px;
+  font-weight: 500;
+}
+.spring-season {
+  background-color: rgb(116 183 118);
+  border: 5px solid rgb(72, 122, 74);
+}
+
+.summer-season {
+  background-color: rgb(203, 203, 19);
+  border: 5px solid #afaf27;
+}
+
+.autumn-season {
+  background-color: rgb(253, 188, 132);
+  border: 5px solid rgb(136, 90, 90);
+}
+
+.winter-season {
+  background-color: rgb(72, 191, 235);
+  border: 5px solid rgb(0, 126, 175);
+}
+h2 {
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+.current-h3 {
+  width: 85%;
+  height: 7vh;
+  text-align: left;
+  border-bottom: 2px solid #000;
+  display: inline;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.missions {
+  width: 95%;
+  height: 32vh;
+  margin-bottom: 15px;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+}
+
+.mission-A,
+.mission-B,
+.mission-C,
+.mission-D {
+  height: 14vh;
+  padding: 10px 10px;
+  border-radius: 20px;
+  background-size: cover;
+  position: relative;
+  width: 365px;
+  margin: 5px 10px;
+}
+
+.element-h3 {
+  text-align: left;
+  width: 23%;
+  margin: 0;
+  height: 5vh;
+}
+.element-h3 h3 {
+  margin: 0;
+}
+
+.bottom-box {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+  height: 25vh;
+  margin-bottom: 32px;
+}
+/* .bottom-box > div {
+  display: none;
+}
+.current-h3 > h3 {
+  display: none;
+} */
+
+h4 {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.new-game {
+  display: none;
+}
+#new-game-button {
+  cursor: pointer;
+  padding: 2rem 5rem;
+  text-align: center;
+  border: none;
+  background-color: #38bdbf;
+  color: white;
+  font-size: 1.4rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 20px;
+}
+.current-element {
+  height: 24vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.rotate-button button,
+.flip-button button {
+  cursor: pointer;
+  padding: 15px;
+  margin: 5px;
+  width: 140px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.element-box {
+  background-color: white;
+  height: 20vh;
+  margin-left: 50px;
+  border-radius: 10%;
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+.water {
+  background-image: url("assets/water_tile.png");
+  background-size: cover;
+}
+.town {
+  background-image: url("assets/village_tile.png");
+  background-size: cover;
+}
+.forest {
+  background-image: url("assets/forest_tile.png");
+  background-size: cover;
+}
+.farm {
+  background-image: url("assets/plains_tile.png");
+  background-size: cover;
+}
+
+.grid-element {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 45px); /* 11 columns */
+  grid-template-rows: repeat(3, 45px); /* 11 rows */
+  gap: 5px; /* Gap between grid squares */
+}
+
+.time-logo {
+  width: 30px;
+  height: 27px;
+  padding: 0;
+}
+
+#time-value {
+  width: 12px;
+  height: 22px;
+  padding: 0;
+  font-weight: 700;
+  font-size: large;
+}
+
+.time-element {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-bottom: 5px;
+}
+
+#mission-span-A,
+#mission-span-B,
+#mission-span-C,
+#mission-span-D {
+  display: none;
+}
+
+#mission-name-A,
+#mission-name-B,
+#mission-name-C,
+#mission-name-D {
+  position: absolute;
+  color: white;
+  bottom: 5px;
+  right: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+.mission-A p,
+.mission-B p,
+.mission-C p,
+.mission-D p {
+  position: absolute;
+  color: white;
+  font-size: 1.1rem;
+  bottom: -15px;
+  right: 95px;
+}
+
+#active {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  background-color: #afaf27;
+  bottom: 9px;
+  right: 40px;
+  display: none;
+}
+
+.mission-A #active,
+.mission-B #active {
+  display: block;
+}
+/* ... (existing styles) */
+
+.map-square.hover-green {
+  background: #abeb83;
+  border: 2px solid #5bbf38;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #5bbf38;
+}
+
+.map-square.hover-red {
+  background-color: #e2bf96;
+  border: 2px solid #ea3323;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #ea3323;
+}
